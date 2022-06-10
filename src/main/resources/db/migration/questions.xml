@@ -1,0 +1,38 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="Create-table-questions" author="Aleksandr Priemkin">
+        <preConditions>
+            <not>
+                <tableExists tableName="QUESTIONS"/>
+            </not>
+        </preConditions>
+        <createTable tableName="QUESTIONS">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="question" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_answer" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="second_answer" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="third_answer" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fourth_answer" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="correct_answer" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

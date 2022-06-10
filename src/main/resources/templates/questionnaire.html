@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="../static/css/style.css"/>
+</head>
+<body>
+<div id="question-container">
+    <form th:modelAttribute="questionForm" method="post">
+        <p><i style="color: aqua" th:each="question : ${questions}" th:text="${question.getQuestion()}"></i></p>
+            <p>
+                <label for="firstAnswer">
+                    <input type="radio" id="firstAnswer" name="answer">
+                    <i style="color: aqua" th:each="answer : ${questions}" th:text="${answer.getFirstAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="secondAnswer">
+                <input type="radio" id="secondAnswer" name="answer">
+                <i style="color: aqua" th:each="answer : ${questions}" th:text="${answer.getSecondAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="thirdAnswer">
+                    <input type="radio" id="thirdAnswer" name="answer">
+                    <i style="color: aqua" th:each="answer : ${questions}" th:text="${answer.getThirdAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="fourthAnswer">
+                    <input type="radio" id="fourthAnswer" name="answer">
+                    <i style="color: aqua" th:each="answer : ${questions}" th:text="${answer.getFourthAnswer()}"></i>
+                </label>
+            </p>
+        <button type="submit">next</button>
+    </form>
+</div>
+</body>
+</html>

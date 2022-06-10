@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="../static/css/style.css"/>
+</head>
+<body>
+<div id="welcome-container">
+    <h1 style="color: aqua" class="title">Welcome! We bring to your attention a test of 10 questions,
+        test your knowledge on various topics</h1>
+    <h4 class="text-center">
+        <a th:href="@{/questionnaire}">Start testing</a>
+    </h4>
+</div>
+</body>
+</html>
