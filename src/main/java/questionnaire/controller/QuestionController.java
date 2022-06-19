@@ -17,6 +17,7 @@ import java.io.IOException;
 public class QuestionController {
 
     private final SearchAndSelectionOfQuestions selectionOfQuestions;
+    private int count = 1;
 
     @RequestMapping("/")
     public String index() {
@@ -34,9 +35,16 @@ public class QuestionController {
     @RequestMapping(path = "/questionnaire", method = RequestMethod.POST)
     public String newQuestions(@ModelAttribute("questionForm") @Valid Questions questionForm,
                                Model model) throws IOException {
-        if (!selectionOfQuestions.allQuestions().isEmpty()) selectionOfQuestions.deleteQuestions();
-        selectionOfQuestions.saveQuestions(questionForm);
-        model.addAttribute("questions", selectionOfQuestions.allQuestions());
-        return "questionnaire";
+        if (counter() < 10) {
+            if (!selectionOfQuestions.allQuestions().isEmpty()) selectionOfQuestions.deleteQuestions();
+            selectionOfQuestions.saveQuestions(questionForm);
+            model.addAttribute("questions", selectionOfQuestions.allQuestions());
+            return "questionnaire";
+        }
+        return "redirect:/";
+    }
+
+    private int counter() {
+        return count++;
     }
 }
