@@ -15,7 +15,6 @@ import javax.validation.constraints.NotEmpty;
 public class Questions {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @NotEmpty

@@ -22,13 +22,20 @@ public class SearchAndSelectionOfQuestionsImpl implements SearchAndSelectionOfQu
     }
 
     @Override
+    public Questions findById(int questId) {
+        Optional<Questions> questionsFromDB = questionsRepository.findById(questId);
+        return questionsFromDB.orElse(new Questions());
+    }
+
+    @Override
     public void deleteQuestions() {
         questionsRepository.deleteAll();
     }
 
     @Override
-    public void saveQuestions(Questions questions) throws IOException {
+    public void saveQuestions(int id, Questions questions) throws IOException {
         List<List<String>> lines = randomize();
+        questions.setId(id);
         questions.setQuestion(lines.get(0).get(0));
         questions.setFirstAnswer(lines.get(0).get(1));
         questions.setSecondAnswer(lines.get(0).get(2));

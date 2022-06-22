@@ -8,6 +8,7 @@ import java.util.List;
 public interface SearchAndSelectionOfQuestions {
 
     List<Questions> allQuestions();
+    Questions findById(int questId);
     void deleteQuestions();
-    void saveQuestions(Questions questions) throws IOException;
+    void saveQuestions(int id, Questions questions) throws IOException;
 }

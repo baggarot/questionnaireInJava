@@ -8,29 +8,264 @@
 <body>
 <div id="question-container">
     <form th:modelAttribute="questionForm" method="post">
-        <p><i style="color: aqua" th:each="question : ${questions}" th:text="${question.getQuestion()}"></i></p>
+        <h3 style="color: crimson">First question</h3>
+        <p><i style="color: aqua" th:each="question : ${questions1}" th:text="${question.getQuestion()}"></i></p>
             <p>
-                <label for="firstAnswer">
-                    <input type="radio" id="firstAnswer" name="answer">
-                    <i style="color: aqua" th:each="answer : ${questions}" th:text="${answer.getFirstAnswer()}"></i>
+                <label for="firstAnswer1">
+                    <input type="radio" id="firstAnswer1" name="firstAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions1}" th:text="${answer.getFirstAnswer()}"></i>
                 </label>
             </p>
             <p>
-                <label for="secondAnswer">
-                <input type="radio" id="secondAnswer" name="answer">
-                <i style="color: aqua" th:each="answer : ${questions}" th:text="${answer.getSecondAnswer()}"></i>
+                <label for="secondAnswer1">
+                <input type="radio" id="secondAnswer1" name="firstAnswer">
+                <i style="color: aqua" th:each="answer : ${questions1}" th:text="${answer.getSecondAnswer()}"></i>
                 </label>
             </p>
             <p>
-                <label for="thirdAnswer">
-                    <input type="radio" id="thirdAnswer" name="answer">
-                    <i style="color: aqua" th:each="answer : ${questions}" th:text="${answer.getThirdAnswer()}"></i>
+                <label for="thirdAnswer1">
+                    <input type="radio" id="thirdAnswer1" name="firstAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions1}" th:text="${answer.getThirdAnswer()}"></i>
                 </label>
             </p>
             <p>
-                <label for="fourthAnswer">
-                    <input type="radio" id="fourthAnswer" name="answer">
-                    <i style="color: aqua" th:each="answer : ${questions}" th:text="${answer.getFourthAnswer()}"></i>
+                <label for="fourthAnswer1">
+                    <input type="radio" id="fourthAnswer1" name="firstAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions1}" th:text="${answer.getFourthAnswer()}"></i>
+                </label>
+            </p>
+        <h3 style="color: crimson">Second question</h3>
+        <p><i style="color: aqua" th:each="question : ${questions2}" th:text="${question.getQuestion()}"></i></p>
+            <p>
+                <label for="firstAnswer2">
+                    <input type="radio" id="firstAnswer2" name="secondAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions2}" th:text="${answer.getFirstAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="secondAnswer2">
+                    <input type="radio" id="secondAnswer2" name="secondAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions2}" th:text="${answer.getSecondAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="thirdAnswer2">
+                    <input type="radio" id="thirdAnswer2" name="secondAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions2}" th:text="${answer.getThirdAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="fourthAnswer2">
+                    <input type="radio" id="fourthAnswer2" name="secondAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions2}" th:text="${answer.getFourthAnswer()}"></i>
+                </label>
+            </p>
+        <h3 style="color: crimson">Third question</h3>
+        <p><i style="color: aqua" th:each="question : ${questions3}" th:text="${question.getQuestion()}"></i></p>
+            <p>
+                <label for="firstAnswer3">
+                    <input type="radio" id="firstAnswer3" name="thirdAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions3}" th:text="${answer.getFirstAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="secondAnswer3">
+                    <input type="radio" id="secondAnswer3" name="thirdAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions3}" th:text="${answer.getSecondAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="thirdAnswer3">
+                    <input type="radio" id="thirdAnswer3" name="thirdAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions3}" th:text="${answer.getThirdAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="fourthAnswer3">
+                    <input type="radio" id="fourthAnswer3" name="thirdAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions3}" th:text="${answer.getFourthAnswer()}"></i>
+                </label>
+            </p>
+        <h3 style="color: crimson">Fourth question</h3>
+        <p><i style="color: aqua" th:each="question : ${questions4}" th:text="${question.getQuestion()}"></i></p>
+            <p>
+                <label for="firstAnswer4">
+                    <input type="radio" id="firstAnswer4" name="fourthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions4}" th:text="${answer.getFirstAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="secondAnswer4">
+                    <input type="radio" id="secondAnswer4" name="fourthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions4}" th:text="${answer.getSecondAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="thirdAnswer4">
+                    <input type="radio" id="thirdAnswer4" name="fourthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions4}" th:text="${answer.getThirdAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="fourthAnswer4">
+                    <input type="radio" id="fourthAnswer4" name="fourthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions4}" th:text="${answer.getFourthAnswer()}"></i>
+                </label>
+            </p>
+        <h3 style="color: crimson">Fifth question</h3>
+        <p><i style="color: aqua" th:each="question : ${questions5}" th:text="${question.getQuestion()}"></i></p>
+            <p>
+                <label for="firstAnswer5">
+                    <input type="radio" id="firstAnswer5" name="fifthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions5}" th:text="${answer.getFirstAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="secondAnswer5">
+                    <input type="radio" id="secondAnswer5" name="fifthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions5}" th:text="${answer.getSecondAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="thirdAnswer5">
+                    <input type="radio" id="thirdAnswer5" name="fifthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions5}" th:text="${answer.getThirdAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="fourthAnswer5">
+                    <input type="radio" id="fourthAnswer5" name="fifthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions5}" th:text="${answer.getFourthAnswer()}"></i>
+                </label>
+            </p>
+        <h3 style="color: crimson">Sixth question</h3>
+        <p><i style="color: aqua" th:each="question : ${questions6}" th:text="${question.getQuestion()}"></i></p>
+            <p>
+                <label for="firstAnswer6">
+                    <input type="radio" id="firstAnswer6" name="sixthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions6}" th:text="${answer.getFirstAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="secondAnswer6">
+                    <input type="radio" id="secondAnswer6" name="sixthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions6}" th:text="${answer.getSecondAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="thirdAnswer6">
+                    <input type="radio" id="thirdAnswer6" name="sixthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions6}" th:text="${answer.getThirdAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="fourthAnswer6">
+                    <input type="radio" id="fourthAnswer6" name="sixthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions6}" th:text="${answer.getFourthAnswer()}"></i>
+                </label>
+            </p>
+        <h3 style="color: crimson">Seventh question</h3>
+        <p><i style="color: aqua" th:each="question : ${questions7}" th:text="${question.getQuestion()}"></i></p>
+            <p>
+                <label for="firstAnswer7">
+                    <input type="radio" id="firstAnswer7" name="seventhAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions7}" th:text="${answer.getFirstAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="secondAnswer7">
+                    <input type="radio" id="secondAnswer7" name="seventhAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions7}" th:text="${answer.getSecondAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="thirdAnswer7">
+                    <input type="radio" id="thirdAnswer7" name="seventhAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions7}" th:text="${answer.getThirdAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="fourthAnswer7">
+                    <input type="radio" id="fourthAnswer7" name="seventhAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions7}" th:text="${answer.getFourthAnswer()}"></i>
+                </label>
+            </p>
+        <h3 style="color: crimson">Eighth question</h3>
+        <p><i style="color: aqua" th:each="question : ${questions8}" th:text="${question.getQuestion()}"></i></p>
+            <p>
+                <label for="firstAnswer8">
+                    <input type="radio" id="firstAnswer8" name="eighthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions8}" th:text="${answer.getFirstAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="secondAnswer8">
+                    <input type="radio" id="secondAnswer8" name="eighthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions8}" th:text="${answer.getSecondAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="thirdAnswer8">
+                    <input type="radio" id="thirdAnswer8" name="eighthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions8}" th:text="${answer.getThirdAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="fourthAnswer8">
+                    <input type="radio" id="fourthAnswer8" name="eighthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions8}" th:text="${answer.getFourthAnswer()}"></i>
+                </label>
+            </p>
+        <h3 style="color: crimson">Ninth question</h3>
+        <p><i style="color: aqua" th:each="question : ${questions9}" th:text="${question.getQuestion()}"></i></p>
+            <p>
+                <label for="firstAnswer9">
+                    <input type="radio" id="firstAnswer9" name="ninthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions9}" th:text="${answer.getFirstAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="secondAnswer9">
+                    <input type="radio" id="secondAnswer9" name="ninthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions9}" th:text="${answer.getSecondAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="thirdAnswer9">
+                    <input type="radio" id="thirdAnswer9" name="ninthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions9}" th:text="${answer.getThirdAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="fourthAnswer9">
+                    <input type="radio" id="fourthAnswer9" name="ninthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions9}" th:text="${answer.getFourthAnswer()}"></i>
+                </label>
+            </p>
+        <h3 style="color: crimson">Tenth question</h3>
+        <p><i style="color: aqua" th:each="question : ${questions10}" th:text="${question.getQuestion()}"></i></p>
+            <p>
+                <label for="firstAnswer10">
+                    <input type="radio" id="firstAnswer10" name="tenthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions10}" th:text="${answer.getFirstAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="secondAnswer10">
+                    <input type="radio" id="secondAnswer10" name="tenthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions10}" th:text="${answer.getSecondAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="thirdAnswer10">
+                    <input type="radio" id="thirdAnswer10" name="tenthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions10}" th:text="${answer.getThirdAnswer()}"></i>
+                </label>
+            </p>
+            <p>
+                <label for="fourthAnswer10">
+                    <input type="radio" id="fourthAnswer10" name="tenthAnswer">
+                    <i style="color: aqua" th:each="answer : ${questions10}" th:text="${answer.getFourthAnswer()}"></i>
                 </label>
             </p>
         <button type="submit">next</button>
