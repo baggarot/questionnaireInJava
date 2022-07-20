@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
+      file: classpath:db/migration/pollResult.xml
+  - include:
       file: classpath:db/migration/questions.xml
