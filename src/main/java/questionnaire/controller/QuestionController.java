@@ -41,7 +41,7 @@ public class QuestionController {
 
     @RequestMapping(path = "/questionnaire", method = RequestMethod.POST)
     public String handlingQuestions(HttpServletRequest request) {
-        if (callCounter() < 20) {
+        if (callCounter() <= 20) {
             String answer = request.getParameter("answer");
             if (answer.equals(selectionOfQuestions.findById(1).getCorrectAnswer()))
                 resultQuestionnaire += 1;
@@ -57,6 +57,7 @@ public class QuestionController {
     @RequestMapping(path = "/result")
     public String pollResult(Model model) {
         model.addAttribute("result", pollResultService.findLastResult().getResult());
+        counter = 0;
         return "result";
     }
 
