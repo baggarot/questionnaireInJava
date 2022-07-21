@@ -17,4 +17,9 @@ public class PollResultServiceImpl implements PollResultService {
     public void saveResult(PollResult pollResult) {
         repository.save(pollResult);
     }
+
+    @Override
+    public PollResult findLastResult() {
+        return repository.findLastBy();
+    }
 }

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Poll Result</title>
+    <link rel="stylesheet" href="../static/css/style.css"/>
+</head>
+<body>
+<div id="poll-result-container">
+    <h1 style="color: aqua" class="title">Congratulations! The survey is over, your result:</h1>
+    <h1 style="color: aqua" th:text="${result} + '/10'"></h1>
+    <h4 class="text-center">
+        <a th:href="@{/}">Return to start</a>
+    </h4>
+</div>
+</body>
+</html>

@@ -31,17 +31,17 @@ public class QuestionController {
     @RequestMapping(path = "/questionnaire", method = RequestMethod.GET)
     public String questionnaire(Model model) throws IOException {
         if (!selectionOfQuestions.allQuestions().isEmpty()) selectionOfQuestions.deleteQuestions();
-        if (callCounter() < 21) {
+        if (callCounter() < 20) {
             selectionOfQuestions.saveQuestions(1, new Questions());
             model.addAttribute("questions", selectionOfQuestions.findById(1));
             return "questionnaire";
         }
-        return "redirect:/";
+        return "redirect:/result";
     }
 
     @RequestMapping(path = "/questionnaire", method = RequestMethod.POST)
     public String handlingQuestions(HttpServletRequest request) {
-        if (callCounter() < 21) {
+        if (callCounter() < 20) {
             String answer = request.getParameter("answer");
             if (answer.equals(selectionOfQuestions.findById(1).getCorrectAnswer()))
                 resultQuestionnaire += 1;
@@ -51,7 +51,13 @@ public class QuestionController {
         pollResult.setDate(new Date());
         pollResult.setResult(resultQuestionnaire);
         pollResultService.saveResult(pollResult);
-        return "redirect:/";
+        return "redirect:/result";
+    }
+
+    @RequestMapping(path = "/result")
+    public String pollResult(Model model) {
+        model.addAttribute("result", pollResultService.findLastResult().getResult());
+        return "result";
     }
 
     private int callCounter() {
