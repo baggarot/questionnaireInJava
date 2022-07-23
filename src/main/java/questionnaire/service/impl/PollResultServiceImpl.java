@@ -11,15 +11,15 @@ import questionnaire.service.PollResultService;
 @RequiredArgsConstructor
 public class PollResultServiceImpl implements PollResultService {
 
-    private final PollResultRepository repository;
+    private final PollResultRepository resultRepository;
 
     @Override
     public void saveResult(PollResult pollResult) {
-        repository.save(pollResult);
+        resultRepository.save(pollResult);
     }
 
     @Override
     public PollResult findLastResult() {
-        return repository.findLastBy();
+        return resultRepository.findLastBy();
     }
 }

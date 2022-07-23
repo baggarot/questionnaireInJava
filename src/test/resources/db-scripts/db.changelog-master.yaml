@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: classpath:db-scripts/questions-test.xml
+  - include:
+      file: classpath:db-scripts/pollResult-test.xml

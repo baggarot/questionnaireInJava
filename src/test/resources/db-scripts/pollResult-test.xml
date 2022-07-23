@@ -1,0 +1,48 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="Create-table-poll-result" author="Aleksandr Priemkin">
+        <preConditions>
+            <not>
+                <tableExists tableName="POLL_RESULT"/>
+            </not>
+        </preConditions>
+        <createTable tableName="POLL_RESULT">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="result" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="Populate-table-poll-result" author="Aleksandr Priemkin">
+        <insert tableName="poll_result">
+            <column name="date" value="2022-07-17"/>
+            <column name="result" value="7"/>
+        </insert>
+        <insert tableName="poll_result">
+            <column name="date" value="2022-07-18"/>
+            <column name="result" value="10"/>
+        </insert>
+        <insert tableName="poll_result">
+            <column name="date" value="2022-07-19"/>
+            <column name="result" value="8"/>
+        </insert>
+        <insert tableName="poll_result">
+            <column name="date" value="2022-07-20"/>
+            <column name="result" value="9"/>
+        </insert>
+        <insert tableName="poll_result">
+            <column name="date" value="2022-07-21"/>
+            <column name="result" value="10"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
